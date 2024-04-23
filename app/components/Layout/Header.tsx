@@ -7,6 +7,7 @@ const Header = () => {
       <div className='container h-[80px] md:h-[73px] pt-[24px] pb-[24px] md:pb-[0] flex items-center justify-between'>
         <Image alt='Ecomz' className='md:h-[37px] h-[32px] md:w-[157px] w-[136px]'  width={157} height={37} src={'/img/ecomz_logo.svg'}/>
         <MenuCnt/>
+        
       </div>
     </header>
   )
