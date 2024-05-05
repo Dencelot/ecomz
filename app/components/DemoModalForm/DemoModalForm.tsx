@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { ChangeEvent, FormEvent, useState } from 'react'
+import { Button } from '../Button/Button'
 
 const initialData = {
   name: '',
@@ -9,17 +10,24 @@ const initialData = {
   phone: '',
 }
 
-export const DemoModalForm = () => {
+interface DemoModalFormProps {
+  setIsSubmited: (value: boolean) => void
+}
+
+export const DemoModalForm = ({ setIsSubmited }: DemoModalFormProps) => {
   const [data, setData] = useState(initialData)
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(data)
     setData(initialData)
+    setIsSubmited(true)
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) =>
     setData({ ...data, [e.target.name]: e.target.value })
+
+  const isBtnDisabled = !data.name || !data.mail || !data.phone
 
   return (
     <form onSubmit={submitHandler} className='flex flex-col gap-y-12 w-full'>
@@ -66,12 +74,9 @@ export const DemoModalForm = () => {
         />
       </div>
       <div className='flex flex-col items-start lg:items-center lg:flex-row gap-x-8'>
-        <button
-          type='submit'
-          className='w-full lg:w-[240px] mb-4 lg:mb-0 bg-[var(--white-100)] text-lg py-5  rounded-2xl hover:bg-[var(--white-08)] transition-all'
-        >
+        <Button disabled={isBtnDisabled} type='submit'>
           Отправить заявку
-        </button>
+        </Button>
         <p className='text-[var(--white-06)] text-lg'>
           Нажимая на кнопку, я соглашаюсь на{' '}
           <Link

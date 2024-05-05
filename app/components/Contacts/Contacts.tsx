@@ -6,7 +6,7 @@ import { YandexMap } from '../YandexMap/YandexMap'
 
 export const Contacts = () => {
   return (
-    <section className='flex-auto w-full minH pt-[120px] md:pt-[160px] h-svh pb-14'>
+    <section className='flex-auto w-full minH pt-[96px] md:pt-[160px] h-svh pb-14'>
       <div className='relative flex pl-5 items-stretch justify-between gap-x-20 w-full h-full'>
         <div className='text-white flex flex-col lg:justify-between w-full lg:min-w-[430px] lg:max-w-[432px] lg:max-h-[646px]'>
           <div className='block lg:hidden mb-5 lg:mb-0'>

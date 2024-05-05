@@ -1,15 +1,27 @@
-import Image from 'next/image'
-import { DemoModalForm } from '../DemoModalForm/DemoModalForm'
+'use client'
 
-export const DemoModal = () => {
+import Image from 'next/image'
+import { useState } from 'react'
+import { DemoModalForm } from '../DemoModalForm/DemoModalForm'
+import { DemoSuccess } from '../DemoSuccess/DemoSuccess'
+
+interface DemoModalProps {
+  isDemo: boolean
+}
+
+export const DemoModal = ({ isDemo }: DemoModalProps) => {
+  const [isSubmited, setIsSubmited] = useState(true)
+
+  if (isSubmited) return <DemoSuccess isDemo={isDemo} />
+
   return (
-    <section className='container h-svh mt-10 lg:mt-6 xl:mt-16'>
+    <section className='container h-svh mt-10 pt-[96px]'>
       <div className='flex items-end justify-between gap-x-8'>
         <div className='flex flex-col w-full'>
           <h1 className='mb-12 text-3xl lg:text-5xl 2xl:text-6xl bg-gradient-to-r from-[#f77e61]  to-[#f75064cc] inline-block text-transparent bg-clip-text'>
-            Запрос демо приложения
+            {isDemo ? 'Запрос демо приложения' : 'Заявка на консультацию'}
           </h1>
-          <DemoModalForm />
+          <DemoModalForm setIsSubmited={setIsSubmited} />
         </div>
         <Image
           className='hidden lg:block'
