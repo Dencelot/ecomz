@@ -5,7 +5,7 @@ import FastBlock from './FastBlock'
 
 const FastStart = () => {
    return (
-      <div className='container overflow-hidden sm:pt-[40px] md:pt-[80px] pt-[56px] xl:pb-[120px] sm:pb-[60px] pb-[40px] relative z-[1] text-[var(--white-100)]'>
+      <section className='container overflow-hidden sm:pt-[40px] md:pt-[80px] pt-[56px] xl:pb-[120px] sm:pb-[60px] pb-[40px] relative z-[1] text-[var(--white-100)]'>
          <h2 className=' xl:mb-[90px] sm:mb-[60px] mb-[40px]  text-[32px] sm:text-[47px] xl:text-[60px] sm:leading-[1.08] leading-[1.19] flex items-start justify-start flex-col'>
             <span className='xl:w-auto w-[70%]'>
             {data.middle.title.white}
@@ -32,7 +32,7 @@ const FastStart = () => {
                ))
             }
          </div>
-      </div>
+      </section>
    )
 }
 
