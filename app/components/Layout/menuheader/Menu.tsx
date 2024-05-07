@@ -5,7 +5,7 @@ import { data } from '@/app/data/data'
 import ContactsLink from './ContactsLink'
 const Menu = ({active,init}:{init:boolean,active:boolean}) => {
    return (
-      <nav className={`${active?'translate-x-0':' md:translate-x-0 translate-x-full'} ${init?'transition-transform':''}  md:bg-inherit bg-[var(--black-07)] md:h-auto h-screen md:relative absolute top-full right-0 md:top-auto`}>
+      <nav className={`${active?'translate-x-0':' md:translate-x-0 translate-x-full'} ${init?'transition-transform':''} md:bg-inherit  md:h-auto h-screen md:relative absolute top-full right-0 md:top-auto`}>
          <ul className=' md:p-0 p-[20px]  items-end md:flex-row flex-col flex md:items-center md:h-[46px] md:rounded-[16px] md:overflow-hidden md:border-solid md:border-[1px] md:border-white'>
             <li className='md:pl-[24px]'>
                <Link className='transition-colors hover:text-[var(--white-06)] text-[var(--white-100)]' href={'/#possibilities'}>{data.header.hash}</Link>

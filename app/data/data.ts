@@ -257,7 +257,8 @@ export const data = {
    header:{
       hash:'О продукте',
       link:'Кастомизация приложения',
-      popup:'Контакты'
+      popup:'Контакты',
+      popupOpened: 'Закрыть'
    },
    footer:{
       email:{

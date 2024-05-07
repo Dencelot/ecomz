@@ -1,12 +1,22 @@
+'use client'
+
 import { contactsData } from '@/app/data/contacts'
 import Logo from '@/public/img/ecomz_logo_big.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { YandexMap } from '../YandexMap/YandexMap'
 
-export const Contacts = () => {
+interface ContactsProps {
+  active: boolean
+}
+
+export const Contacts = ({ active }: ContactsProps) => {
   return (
-    <section className='flex-auto w-full minH pt-[96px] md:pt-[160px] h-svh pb-14'>
+    <section
+      className={`flex-auto w-full transition-all minH pt-[96px] md:pt-[120px] h-svh pb-14 fixed z-50 bg-[var(--bazalt-100)] ${
+        active ? 'translate-x-0' : 'translate-x-full'
+      }`}
+    >
       <div className='relative flex pl-5 items-stretch justify-between gap-x-20 w-full h-full'>
         <div className='text-white flex flex-col lg:justify-between w-full lg:min-w-[430px] lg:max-w-[432px] lg:max-h-[646px]'>
           <div className='block lg:hidden mb-5 lg:mb-0'>
