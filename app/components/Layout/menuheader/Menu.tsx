@@ -8,10 +8,10 @@ const Menu = ({active,init}:{init:boolean,active:boolean}) => {
       <nav className={`${active?'translate-x-0':' md:translate-x-0 translate-x-full'} ${init?'transition-transform':''}  md:bg-inherit bg-[var(--black-07)] md:h-auto h-screen md:relative absolute top-full right-0 md:top-auto`}>
          <ul className=' md:p-0 p-[20px]  items-end md:flex-row flex-col flex md:items-center md:h-[46px] md:rounded-[16px] md:overflow-hidden md:border-solid md:border-[1px] md:border-white'>
             <li className='md:pl-[24px]'>
-               <Link className='transition-colors hover:text-[var(--white-06)] text-[var(--white-100)]' href={''}>{data.header.hash}</Link>
+               <Link className='transition-colors hover:text-[var(--white-06)] text-[var(--white-100)]' href={'/#possibilities'}>{data.header.hash}</Link>
             </li>
             <li className='md:px-[32px]'>
-               <Link className='text-[var(--white-100)] hover:text-[var(--white-06)] transition-colors' href={''}>{data.header.link}</Link>
+               <Link className='text-[var(--white-100)] hover:text-[var(--white-06)] transition-colors' href={'/constructor'}>{data.header.link}</Link>
             </li>
             <ContactsLink/>
          </ul>

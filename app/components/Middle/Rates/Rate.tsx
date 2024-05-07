@@ -1,6 +1,7 @@
 import { data } from '@/app/data/data'
 import Image from 'next/image'
 import React from 'react'
+import Btn from '../../Button/Btn'
 
 const Rate = ({item}:{item:any}) => {
   return (
@@ -34,11 +35,8 @@ const Rate = ({item}:{item:any}) => {
                ))
             }
          </ul>
-         <button className=' mt-[40px] text-[18px] text-[var(--white-100)] relative z-[2] transition-colors hover:bg-[var(--black-90)] flex items-center justify-center h-[66px] w-full rounded-[20px] bg-[var(--bazalt-100)]'>
-            {
-               data.middle.rates.btn
-            }
-         </button>
+         
+         <Btn text={data.middle.rates.btn} classNames={' mt-[40px] text-[18px] text-[var(--white-100)] relative z-[2] transition-colors hover:bg-[var(--black-90)] flex items-center justify-center h-[66px] w-full rounded-[20px] bg-[var(--bazalt-100)]'}/>
       </article>
    </div>
 
