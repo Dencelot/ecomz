@@ -30,7 +30,7 @@ const Possibilities = () => {
                <PosTitle item={data.middle.possibilities.third}/>
                <ThirdSlider/>
             </article>
-            <Btn text={data.middle.possibilities.btn} classNames={'2xl:mt-[32px] md:mt-[24px] mt-[20px] xs:text-[32px] text-[24px] leading-[1.3] text-[var(--white-100)] md:rounded-[20px] rounded-[30px] md:py-[45px] py-[19px] bg-[var(--bazalt-100)] w-full transition-colors hover:bg-[var(--black-90)]'}/>
+            <Btn isDemo text={data.middle.possibilities.btn} classNames={'2xl:mt-[32px] md:mt-[24px] mt-[20px] xs:text-[32px] text-[24px] leading-[1.3] text-[var(--white-100)] md:rounded-[20px] rounded-[30px] md:py-[45px] py-[19px] bg-[var(--bazalt-100)] w-full transition-colors hover:bg-[var(--black-90)]'}/>
 
          </div>
       </section>

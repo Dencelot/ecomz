@@ -17,7 +17,7 @@ interface DemoModalFormProps {
 export const DemoModalForm = ({ setIsSubmited }: DemoModalFormProps) => {
   const [data, setData] = useState(initialData)
 
-  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {    
     e.preventDefault()
     console.log(data)
     setData(initialData)

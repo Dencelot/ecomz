@@ -2,12 +2,13 @@ import Image from 'next/image'
 import { Button } from '../Button/Button'
 
 interface DemoSuccessProps {
-  isDemo: boolean
+  isDemo: boolean | undefined
+  setIsOpened: (val: boolean) => void
 }
 
-export const DemoSuccess = ({ isDemo }: DemoSuccessProps) => {
+export const DemoSuccess = ({ isDemo, setIsOpened }: DemoSuccessProps) => {
   return (
-    <section className='container h-svh pt-[96px]'>
+    <section className='container h-svh minH bg-[var(--bazalt-100)]  pt-[96px] fixed inset-0 z-50'>
       <div className='flex items-stretch'>
         <Image
           className='hidden lg:block'
@@ -39,7 +40,7 @@ export const DemoSuccess = ({ isDemo }: DemoSuccessProps) => {
                 : 'В ближайшее время мы свяжемся с вами.'}
             </p>
           </div>
-          <Button className='mt-8'>Понятно</Button>
+          <Button onClick={() => setIsOpened(false)} className='mt-8'>Понятно</Button>
         </div>
       </div>
     </section>
