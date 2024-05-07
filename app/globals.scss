@@ -126,7 +126,6 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  font-weight: 500;
 font-size: 18px;
 line-height: 144%;
 font-family: var(--font-family);
@@ -134,7 +133,10 @@ font-family: var(--font-family);
 }
 
 input,button,textarea{font-family: inherit; }
+*{
+	font-weight: 500;
 
+}
 
 
 input::-ms-clear{display: none;}
@@ -150,7 +152,7 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 
-h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 ._ibg {
   background-position: center;
@@ -272,3 +274,15 @@ img{
     overflow: hidden;
 }
 
+
+.sliderscroll::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+}
+
+.dropShadow{
+	transition: filter 0.2s;
+	&:hover{
+		filter: drop-shadow(0px 0px 50px var(--sunset-100));
+	}
+}
