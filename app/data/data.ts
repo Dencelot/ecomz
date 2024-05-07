@@ -1,4 +1,3 @@
-import { title } from "process";
 
 export const data = {
    top:{
@@ -274,7 +273,7 @@ export const data = {
          link:'https://yandex.ru/maps/-/CDbuEHIy'
       },
       copy:{
-         text:'© 2023, ecomz – Готовое мобильное приложение для вашего бизнеса'
+         text:`© ${new Date().getFullYear()}, ecomz – Готовое мобильное приложение для вашего бизнеса`
       }
       
    }
