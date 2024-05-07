@@ -5,7 +5,7 @@ import Btn from '../../Button/Btn'
 
 const Rate = ({item}:{item:any}) => {
   return (
-   <div className={` md:m-[16px] flex-auto z-[1]  relative m-[12px] pt-[70px] xl:max-w-[435px] ${item.id===2?'md:translate-y-[50px]':''}`}>
+   <div className={` md:m-[16px] flex-auto z-[1]  relative m-[12px] pt-[70px] xl:max-w-[435px] sm:max-w-none max-w-[450px] ${item.id===3?'w-full':'sm:w-[calc(50%-24px)]'} md:w-auto ${item.id===2?'md:translate-y-[50px]':''}`}>
 
       <article className={` 2xl:p-[40px] p-[20px] 2xl:pt-0 pt-[0] rounded-[24px] ${item.id===3?'bg-[var(--black-40)]':'bg-[var(--black-20)]'}`}>
          <Image className={`left-[49px] absolute top-0 ${item.id===3?'':'w-[144px] h-auto'}`} width={160} height={160} quality={100} alt={item.title} src={item.img}/>
