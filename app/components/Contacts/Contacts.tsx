@@ -5,20 +5,20 @@ import Logo from '@/public/img/ecomz_logo_big.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { YandexMap } from '../YandexMap/YandexMap'
+import { useAppSelector } from '@/app/app/hooks'
+import { actualModals } from '@/app/features/counter/chatKitSlice'
 
-interface ContactsProps {
-  active: boolean
-}
 
-export const Contacts = ({ active }: ContactsProps) => {
+export const Contacts = () => {
+  const modals = useAppSelector(actualModals)
   return (
     <section
-      className={`flex-auto w-full transition-all minH pt-[96px] md:pt-[120px] h-svh pb-14 fixed z-50 bg-[var(--bazalt-100)] ${
-        active ? 'translate-x-0' : 'translate-x-full'
+      className={`flex-auto w-full transition-[transform,opacity] duration-300 minH pt-[96px] md:pt-[120px] h-svh  fixed z-50 bg-[var(--bazalt-100)] ${
+        modals.contacts ? 'translate-x-0' : 'translate-x-full opacity-0'
       }`}
     >
-      <div className='relative flex pl-5 items-stretch justify-between gap-x-20 w-full h-full'>
-        <div className='text-white flex flex-col lg:justify-between w-full lg:min-w-[430px] lg:max-w-[432px] lg:max-h-[646px]'>
+      <div className='relative flex 2xl:pl-5 sm:pl-[40px] pl-[20px] sm:pr-0 pr-[20px] items-stretch justify-between gap-x-20 w-full h-full'>
+        <div className='text-white pb-14 flex flex-col lg:justify-between w-full lg:min-w-[430px] lg:max-w-[432px] lg:max-h-[646px]'>
           <div className='block lg:hidden mb-5 lg:mb-0'>
             <Image src={Logo} alt='Logo' width={92} height={92} />
           </div>
@@ -61,7 +61,7 @@ export const Contacts = ({ active }: ContactsProps) => {
         </div>
         <YandexMap />
         <Image
-          className='hidden lg:block absolute top-[224px] left-[400px]'
+          className='hidden lg:block absolute top-[224px] 2xl:left-[400px] left-[420px]'
           src={Logo}
           alt='Ecomz logo'
           width={212}

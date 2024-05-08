@@ -5,9 +5,9 @@ import Btn from '../Button/Btn'
 const Question = () => {
   return (
     <div className='absolute sm:left-[40px] h-max left-0 md:left-auto md:right-[40px] md:top-1/2 md:-translate-y-[200px]   sm:bottom-[40px] bottom-0  z-[2] w-full sm:w-auto lg:w-[420px] xl:w-[480px] flex items-start justify-center '>
-      <div className= 'bg-[var(--black-09)] md:bg-[var(--neon-01)] rounded-[32px] p-[16px] w-full sm:max-w-[537px] flex lg:items-center  justify-between lg:flex-row md:flex-col '>
+      <div className= 'backdrop-blur  bg-[var(--black-07] md:bg-[var(--neon-03)] rounded-[32px] p-[16px] w-full sm:max-w-[537px] flex items-center justify-between  '>
          <p className='flex flex-col p-[8px] mr-[12px] xxs:text-[18px] text-[14px]'>
-            <span className='text-[var(--sunrise-100)]'>{data.top.question.title}</span>
+            <span className='text-[var(--sunrise-100)] '>{data.top.question.title}</span>
             <span className=' text-nowrap'>{data.top.question.subtitle}</span>
          </p>
          

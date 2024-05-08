@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import { Button } from '../Button/Button'
+import { useAppDispatch, useAppSelector } from '@/app/app/hooks'
+import { actualModals, addModals } from '@/app/features/counter/chatKitSlice'
 
 interface DemoSuccessProps {
   isDemo: boolean | undefined
-  setIsOpened: (val: boolean) => void
+  setIsOpened?: (val: boolean) => void
 }
 
-export const DemoSuccess = ({ isDemo, setIsOpened }: DemoSuccessProps) => {
+export const DemoSuccess = ({ isDemo }: DemoSuccessProps) => {
+  const dispatch = useAppDispatch()
+  const modals = useAppSelector(actualModals)
   return (
-    <section className='container h-svh minH bg-[var(--bazalt-100)]  pt-[96px] fixed inset-0 z-50'>
-      <div className='flex items-stretch'>
+    <section className={` h-svh transition-[transform,opacity] duration-300 minH bg-[var(--bazalt-100)] mt-10 pt-[96px] fixed inset-0 z-50
+    ${modals.demo.open ? 'translate-x-0' : 'translate-x-full opacity-0'}
+    `}>
+      <div className='flex items-stretch container'>
         <Image
           className='hidden lg:block'
           src={'/img/ninjaSuccess.svg'}
@@ -40,7 +46,7 @@ export const DemoSuccess = ({ isDemo, setIsOpened }: DemoSuccessProps) => {
                 : 'В ближайшее время мы свяжемся с вами.'}
             </p>
           </div>
-          <Button onClick={() => setIsOpened(false)} className='mt-8'>Понятно</Button>
+          <Button onClick={() => dispatch(addModals({contacts:false,demo:{open:false,isDemo:isDemo ?? false}}))} className='mt-8'>Понятно</Button>
         </div>
       </div>
     </section>

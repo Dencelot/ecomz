@@ -4,23 +4,28 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { DemoModalForm } from '../DemoModalForm/DemoModalForm'
 import { DemoSuccess } from '../DemoSuccess/DemoSuccess'
+import { useAppDispatch, useAppSelector } from '@/app/app/hooks'
+import { actualModals } from '@/app/features/counter/chatKitSlice'
 
 interface DemoModalProps {
   isDemo: boolean | undefined
-  setOpened: (val: boolean) => void
+  setOpened?: (val: boolean) => void
 }
 
-export const DemoModal = ({ isDemo, setOpened }: DemoModalProps) => {
+export const DemoModal = () => {
   const [isSubmited, setIsSubmited] = useState(false)
+  const modals = useAppSelector(actualModals)
 
-  if (isSubmited) return <DemoSuccess setIsOpened={setOpened} isDemo={isDemo} />
+  if (isSubmited) return <DemoSuccess isDemo={modals.demo.isDemo} />
 
   return (
-    <section className='container h-svh minH bg-[var(--bazalt-100)] mt-10 pt-[96px] fixed inset-0 z-50'>
-      <div className='flex items-end justify-between gap-x-8'>
+    <section className={` h-svh transition-[transform,opacity] duration-300 minH bg-[var(--bazalt-100)] mt-10 pt-[96px] fixed inset-0 z-50
+    ${modals.demo.open ? 'translate-x-0' : 'translate-x-full opacity-0'}
+    `}>
+      <div className='container flex items-end justify-between gap-x-8'>
         <div className='flex flex-col w-full'>
           <h1 className='mb-12 text-3xl lg:text-5xl 2xl:text-6xl bg-gradient-to-r from-[#f77e61]  to-[#f75064cc] inline-block text-transparent bg-clip-text'>
-            {isDemo ? 'Запрос демо приложения' : 'Заявка на консультацию'}
+            {modals.demo.isDemo ? 'Запрос демо приложения' : 'Заявка на консультацию'}
           </h1>
           <DemoModalForm setIsSubmited={setIsSubmited} />
         </div>
