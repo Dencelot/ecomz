@@ -13,7 +13,7 @@ export const Contacts = () => {
   const modals = useAppSelector(actualModals)
   return (
     <section
-      className={`flex-auto w-full transition-[transform,opacity] duration-300 minH pt-[96px] md:pt-[120px] h-svh  fixed z-50 bg-[var(--bazalt-100)] ${
+      className={`scrollCustom flex-auto w-full transition-[transform,opacity] duration-300 overflow-y-auto pt-[96px] md:pt-[120px] h-svh  fixed z-50 bg-[var(--bazalt-100)] ${
         modals.contacts ? 'translate-x-0' : 'translate-x-full opacity-0'
       }`}
     >

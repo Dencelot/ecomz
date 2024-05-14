@@ -19,7 +19,7 @@ export const DemoModal = () => {
   if (isSubmited) return <DemoSuccess isDemo={modals.demo.isDemo} />
 
   return (
-    <section className={` h-svh transition-[transform,opacity] duration-300 minH bg-[var(--bazalt-100)] mt-10 pt-[96px] fixed inset-0 z-50
+    <section className={`overflow-y-auto scrollCustom h-svh transition-[transform,opacity] duration-300  bg-[var(--bazalt-100)]  pt-[96px] fixed inset-0 z-50
     ${modals.demo.open ? 'translate-x-0' : 'translate-x-full opacity-0'}
     `}>
       <div className='container flex items-end justify-between gap-x-8'>

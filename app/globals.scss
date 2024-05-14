@@ -274,7 +274,7 @@ img {
 }
 
 .minH {
-  min-height: 870px;
+  min-height: 650px;
   @media (max-width: 1399px) {
     min-height: 700px;
   }
@@ -324,4 +324,22 @@ img {
 
 .textShadow{
   text-shadow: 0 0 1px #ffffff;
+}
+
+
+.scrollCustom::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+
+}
+
+.scrollCustom::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--sunrise-100);
+
+
+}
+.scrollCustom::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background-color: var(--black-70);
 }

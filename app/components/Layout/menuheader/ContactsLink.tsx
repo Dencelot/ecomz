@@ -16,7 +16,7 @@ const ContactsLink = ({setActive}:{setActive:any}) => {
    }
   return (
    <li className='h-full'>
-      <button onClick={handleClick} className='flex items-center justify-between h-full md:px-[16px] md:text-[var(--bazalt-100)] md:hover:bg-[var(--sunrise-40)] text-[var(--white-100)] md:bg-[var(--white-100)] md:w-[150px] rounded-tl-[16px] rounded-bl-[16px] transition-colors'>
+      <button onClick={handleClick} className={`flex items-center justify-between h-full md:px-[16px] ${(modals.demo.open || modals.contacts)?'text-[var(--sunrise-100)] border-solid border-0 border-l-[1px] border-[var(--sunrise-100)]': ' md:text-[var(--bazalt-100)] md:hover:bg-[var(--sunrise-40)] text-[var(--white-100)] md:bg-[var(--white-100)]'} md:w-[150px] rounded-tl-[16px] rounded-bl-[16px] transition-colors`}>
          <span className='md:mr-[12px]'>
             {(modals.demo.open || modals.contacts) ? data.header.popupOpened : data.header.popup}
          </span>
