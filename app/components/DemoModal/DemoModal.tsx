@@ -24,9 +24,9 @@ export const DemoModal = () => {
     `}>
       <div className='container flex items-end justify-between gap-x-8'>
         <div className='flex flex-col w-full'>
-          <h1 className='mb-12 text-3xl lg:text-5xl 2xl:text-6xl bg-gradient-to-r from-[#f77e61]  to-[#f75064cc] inline-block text-transparent bg-clip-text'>
+          <h2 className='mb-12 text-3xl lg:text-5xl 2xl:text-6xl bg-gradient-to-r from-[#f77e61]  to-[#f75064cc] inline-block text-transparent bg-clip-text'>
             {modals.demo.isDemo ? 'Запрос демо приложения' : 'Заявка на консультацию'}
-          </h1>
+          </h2>
           <DemoModalForm setIsSubmited={setIsSubmited} />
         </div>
         <Image

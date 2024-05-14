@@ -23,9 +23,9 @@ export const Contacts = () => {
             <Image src={Logo} alt='Logo' width={92} height={92} />
           </div>
           <div className='flex flex-col items-start flex-1 lg:flex-none'>
-            <h1 className='text-4xl lg:text-5xl leading-[120%] mb-4'>
+            <h2 className='text-4xl lg:text-5xl leading-[120%] mb-4'>
               {contactsData.title}
-            </h1>
+            </h2>
             <p className='text-xl lg:text-2xl'>{contactsData.text}</p>
           </div>
           <ul className='flex flex-col gap-y-4'>
