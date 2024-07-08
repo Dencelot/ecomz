@@ -166,32 +166,26 @@ export const constructorData:Data = {
          {
             id:1,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
          {
             id:2,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
          {
             id:3,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
          {
             id:4,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
          {
             id:5,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
          {
             id:6,
             text:'Баннер 138x138',
-            img:'/img/construcor/smallbanner.svg'
          },
       ],
       catalog:{
@@ -378,7 +372,6 @@ type DemoData = {
 type SmallBannerData = {
   id: number;
   text: string;
-  img: string;
 };
 
 type CatalogItem = {
