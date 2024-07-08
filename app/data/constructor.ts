@@ -327,6 +327,7 @@ export const constructorData:Data = {
             text:'Корзина',
             img:'/img/construcor/Bag.png'
          },
+         
          {
             id:4,
             text:'Избранное ',
