@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Montserrat,Manrope, Ubuntu } from "next/font/google";
 import "./globals.scss";
 import Header from "./components/Layout/Header";
 import localFont from "next/font/local"
 import ProviderClient from "./components/Providers/ProviderClient";
 import { Contacts } from "./components/Contacts/Contacts";
 import { DemoModal } from "./components/DemoModal/DemoModal";
+const inter = Inter({ subsets: ["latin"],variable: "--font5", });
+const montserrat = Montserrat({ subsets: ["latin"],variable: "--second-family", });
+const manrope = Manrope({ subsets: ["latin"],variable: "--font3", });
+const ubuntu = Ubuntu({ subsets: ["latin"],weight:['400','500','700'],variable: "--font6", });
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ecomz",
@@ -52,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${rising.variable}`}>
+      <body className={`${ubuntu.variable} ${manrope.variable} ${rising.variable} ${inter.variable} ${montserrat.variable}`}>
 			<ProviderClient>
 				<Header/>
 				{children}

@@ -86,11 +86,39 @@
   --font7: 'Gilroy', sans-serif;
   --font8: 'SF Pro', sans-serif;
 }
-
+.fontF--first-family{
+  font-family: var(--font-family);
+}
+.fontF--second-family{
+  font-family: var(--second-family);
+}
+.fontF--font3{
+  font-family: var(--font3);
+}
+.fontF--font4{
+  font-family: var(--font4);
+}
+.fontF--font5{
+  font-family: var(--font5);
+}
+.fontF--font6{
+  font-family: var(--font6);
+}
+.fontF--font7{
+  font-family: var(--font7);
+}
+.fontF--fot8{
+  font-family: var(--font8);
+}
+.fontF--font9{
+  font-family: var(--font9);
+}
 * {
   padding: 0;
   margin: 0;
   border: 0;
+  word-wrap: break-word;
+
 }
 *,
 *:before,
@@ -128,6 +156,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 body {
   min-height: 100%;
@@ -228,7 +257,7 @@ img {
   font-weight: 500;
   font-size: 105px;
   line-height: 99%;
-  max-width: 300px;
+  max-width: 600px;
 
   letter-spacing: -0.02em;
   @media (max-width: 1599px) {
@@ -236,7 +265,7 @@ img {
   }
   @media (max-width: 1399px) {
     font-size: 64px;
-    max-width: 200px;
+    max-width: 500px;
   }
   @media (max-width: 1100px) {
     font-size: 54px;
@@ -342,4 +371,40 @@ img {
 .scrollCustom::-webkit-scrollbar-track{
   border-radius: 5px;
   background-color: var(--black-70);
+}
+
+.phoneScroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.phoneScroll::-webkit-scrollbar-track {
+  background-color: var(--black-30);
+}
+.phoneScroll::-webkit-scrollbar-thumb {
+  background-color: var(--black-70);
+}
+.constructor{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--white-100);
+}
+
+.bgPhone{
+  
+}
+.phoneSvg{
+  fill: #242a38;
+  path{
+    fill:transparent!important;
+  }
+}
+
+.hoverFilter{
+  cursor: pointer;
+  transition: filter 0.2s;
+  &:hover{
+    filter:contrast(1.5)
+  }
 }
