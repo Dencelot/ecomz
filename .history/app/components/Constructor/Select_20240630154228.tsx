@@ -1,0 +1,15 @@
+import React from 'react'
+
+const Select = ({type,data}:{type:string,data:any}) => {
+   return (
+      <div>
+         { type === 'colors' &&
+            <p>
+               {data.}
+            </p>
+         }
+      </div>
+   )
+}
+
+export default Select
